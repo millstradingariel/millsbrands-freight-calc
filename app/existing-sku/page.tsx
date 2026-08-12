@@ -125,9 +125,14 @@ export default function ExistingSkuPage() {
                     <div>
                         <label className="block text-xs font-medium text-zinc-400 mb-1.5">Postcode</label>
                         <input
-                            type="number"
+                            type="text"
+                            inputMode="numeric"
+                            pattern="[0-9]*"
                             value={postcode}
-                            onChange={(e) => setPostcode(e.target.value)}
+                            onChange={(e) => {
+                                const val = e.target.value.replace(/\D/g, '').slice(0, 4);
+                                setPostcode(val);
+                            }}
                             placeholder="e.g., 2000"
                             maxLength={4}
                             className="w-full bg-zinc-900/50 border border-zinc-700 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-sky-600 focus:ring-1 focus:ring-sky-600 transition-all"
