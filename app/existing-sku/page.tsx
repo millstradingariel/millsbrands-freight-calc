@@ -31,6 +31,11 @@ export default function ExistingSkuPage() {
                 }),
             });
 
+            if (res.status === 500) {
+                setErrorMessage('Something went wrong on our end. Please contact Administrator.');
+                return;
+            }
+
             const data = await res.json();
 
             if (!res.ok) {
