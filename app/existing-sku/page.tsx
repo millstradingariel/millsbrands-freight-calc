@@ -89,7 +89,7 @@ export default function ExistingSkuPage() {
                 </p>
                 <div className="mt-2 p-3 rounded-lg bg-sky-700/10 border border-sky-600/20 text-sky-500 text-xs font-semibold">
                     <strong className="text-sm">NOTE:</strong> For eBay purchases, Customer Freight Costs may vary in actual as Postage cost is adjusted when SKU is on sale.
-                    <br /><span className="sm:flex sm:ml-14">Please refer to eBay listing postage calculator for actual postage cost. Wag mag lagay ng Kitted SKU</span>
+                    <br /><span className="sm:flex sm:ml-14">Please refer to eBay listing postage calculator for actual postage cost. Do not put any Kitted SKUs</span>
                 </div>
             </div>
 
