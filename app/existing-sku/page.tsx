@@ -45,11 +45,23 @@ export default function ExistingSkuPage() {
                 return;
             }
 
-            setFreightCarrier(result.products[0].CourierName ?? '');
-            setShippingMethod(result.products[0].shippingmethod ?? '');
-            setCustomerFreight(result.products[0].cost ?? '');
-            setCourierFreightCost(result.products[0].CourierCost ?? '');
-            setChargeableWeight(result.products[0].ChargeableWeight ?? '');
+            const product = result.products?.[0];
+
+            if (!product) {
+                setErrorMessage('No shipping options returned.');
+                return;
+            }
+
+            if (product.success === false || product.error) {
+                setErrorMessage('SKU not found');
+                return;
+            }
+
+            setFreightCarrier(product.CourierName ?? '');
+            setShippingMethod(product.shippingmethod ?? '');
+            setCustomerFreight(product.cost ?? '');
+            setCourierFreightCost(product.CourierCost ?? '');
+            setChargeableWeight(product.ChargeableWeight ?? '');
         } catch (err) {
             setErrorMessage('Something went wrong. Please try again.');
         } finally {
