@@ -24,7 +24,7 @@ export default function NewSkuPage() {
         setIsLoading(true);
 
         try {
-            const res = await fetch(`${API_URL}/api/postage/new`, {
+            const res = await fetch(`${API_URL}/api/new`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

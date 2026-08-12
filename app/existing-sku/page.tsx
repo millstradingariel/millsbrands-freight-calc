@@ -23,7 +23,7 @@ export default function ExistingSkuPage() {
         setIsLoading(true);
 
         try {
-            const res = await fetch(`${API_URL}/api/postage/existing`, {
+            const res = await fetch(`${API_URL}/api/existing`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
