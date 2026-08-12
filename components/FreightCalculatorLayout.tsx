@@ -89,7 +89,7 @@ export default function FreightCalculatorLayout({
 
                 {/* Footer / Mastfoot */}
                 <footer className="pt-8 text-center text-xs text-zinc-500">
-                    <p>MIT Shipping and Freight Calculator &copy; {new Date().getFullYear()}</p>
+                    <p>MillsBrands Freight Calculator &copy; {new Date().getFullYear()}</p>
                 </footer>
 
             </div>
