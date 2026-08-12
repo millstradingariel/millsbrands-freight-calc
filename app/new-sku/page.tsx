@@ -34,6 +34,11 @@ export default function NewSkuPage() {
 
             const data = await res.json();
 
+            if (res.status === 500) {
+                setErrorMessage('Oops... something went wrong. Please contact ESS Team or send an email to mills.ecommsupport@millsbrands.com.au.');
+                return;
+            }
+
             if (!res.ok) {
                 setErrorMessage(data.message || 'Failed to calculate freight.');
                 return;

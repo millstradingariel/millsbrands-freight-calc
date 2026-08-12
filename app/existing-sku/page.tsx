@@ -32,7 +32,7 @@ export default function ExistingSkuPage() {
             });
 
             if (res.status === 500) {
-                setErrorMessage('Something went wrong on our end. Please contact Administrator.');
+                setErrorMessage('Oops... something went wrong. Please contact ESS Team or send an email to mills.ecommsupport@millsbrands.com.au.');
                 return;
             }
 
